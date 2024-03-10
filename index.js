@@ -17,5 +17,5 @@ button.onclick = function() {
 
     const rand = parseInt(Math.random() * (methods.length - 1))
 
-    window.open(base(chance[methods[rand]]()))
+    window.location.href = base(chance[methods[rand]]())
 }
