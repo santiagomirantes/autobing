@@ -1,21 +1,21 @@
 const base = s => `https://www.bing.com/search?q=${encodeURIComponent(s)}&form=QBLH&sp=-1&lq=0&pq=goo&sc=11-3&qs=n&sk=&cvid=A57BE96569BA4505B4554D8D20EEC993&ghsh=0&ghacc=0&ghpl=`
 const button = document.querySelector("#open")
-const methods = ["country","last","animal","month"]
 
-let ex = 0
+/*(() => {
 
-/*const chance = new Chance()*/
+    const elems = Array.from(document.querySelectorAll("clf-ca-card"))
+
+})()*/
+
+button.onclick = async function () {
 
 
-button.onclick = function() {
+    const rand = parseInt(Math.random() * (arr.length - 1))
 
-    ex++
+    const opened = window.open(base(arr[rand]))
 
-    if(ex > 20) {
-        clearInterval(int)
-    }
+    setTimeout(() => {
+        opened.close()
+    }, 4000)
 
-    const rand = parseInt(Math.random() * (methods.length - 1))
-
-    window.location.href = base(chance[methods[rand]]())
 }
