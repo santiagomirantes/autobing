@@ -16,6 +16,6 @@ button.onclick = async function () {
 
     setTimeout(() => {
         opened.close()
-    }, 4000)
+    }, 5000)
 
 }
